@@ -55,7 +55,7 @@ var aToZ = (function(){
         divMediaLeft.classList.add("media-left");
         var img = document.createElement("img");
         img.src = "http://placehold.it/100x50";
-        img.alt = cache[i].title;
+        // img.alt = cache[i].title;
         img.classList.add("media-object");
         divMediaLeft.appendChild(img);
         divMedia.appendChild(divMediaLeft);
@@ -110,14 +110,14 @@ var aToZ = (function(){
       for (var j = 0; j < items; j++ ) {
         var divMediaPaged = document.createElement("div");
         divMediaPaged.classList.add("media");
-        var divMediaLeft = document.createElement("div");
-        divMediaLeft.classList.add("media-left");
-        var img = document.createElement("img");
-        img.src = "http://placehold.it/100x50";
-        img.alt = data.atoz_programmes.elements[j].title;
-        img.classList.add("media-object");
-        divMediaLeft.appendChild(img);
-        divMediaPaged.appendChild(divMediaLeft);
+        var divMediaLeft2 = document.createElement("div");
+        divMediaLeft2.classList.add("media-left");
+        var img2 = document.createElement("img");
+        img2.src = "http://placehold.it/100x50";
+        // img.alt = data.atoz_programmes.elements[j].title;
+        img2.classList.add("media-object");
+        divMediaLeft2.appendChild(img2);
+        divMediaPaged.appendChild(divMediaLeft2);
 
         var divMediaBodyPaged = document.createElement("div");
         divMediaBodyPaged.classList.add("media-body");
@@ -168,7 +168,7 @@ var aToZ = (function(){
     var xmlHttp = new XMLHttpRequest();
     var constructedURL = baseURI + lowercase + "/programmes";
     baseURIResult = constructedURL;
-    console.log(constructedURL);
+    // console.log(constructedURL);
     xmlHttp.open( "GET", constructedURL, false );
     xmlHttp.send( null );
     if (xmlHttp.status === 200) {
